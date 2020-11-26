@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 916545}
   - component: {fileID: 916544}
   - component: {fileID: 916543}
-  - component: {fileID: 916547}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -218,28 +217,14 @@ RectTransform:
   - {fileID: 1559305940}
   - {fileID: 951147825}
   - {fileID: 2096635038}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 470527489}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &916547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9bf7140b4d977641b7ca8d23b906b67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPaused: 0
-  pauseMenuUI: {fileID: 1261660109}
 --- !u!1 &130845600
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +465,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 470527489}
+  - component: {fileID: 470527492}
   - component: {fileID: 470527488}
+  - component: {fileID: 470527493}
+  - component: {fileID: 470527491}
+  - component: {fileID: 470527490}
   m_Layer: 0
   m_Name: GameProcess
   m_TagString: Untagged
@@ -501,6 +490,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogWindowUI: {fileID: 547869261}
+  Energy: {fileID: 470527493}
+  Faith: {fileID: 470527491}
+  Satiety: {fileID: 470527490}
 --- !u!4 &470527489
 Transform:
   m_ObjectHideFlags: 0
@@ -511,10 +503,65 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.811724, y: -146.74062, z: 867.07324}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 916546}
+  - {fileID: 1644808840}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &470527490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470527487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79882cf32584b8e459671316e8b1eb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 2096635039}
+--- !u!114 &470527491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470527487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79882cf32584b8e459671316e8b1eb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 951147826}
+--- !u!114 &470527492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470527487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9bf7140b4d977641b7ca8d23b906b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  pauseMenuUI: {fileID: 1261660109}
+--- !u!114 &470527493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470527487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79882cf32584b8e459671316e8b1eb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar: {fileID: 1559305943}
 --- !u!1 &540305863
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +870,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 916547}
+      - m_Target: {fileID: 470527492}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -882,7 +929,6 @@ GameObject:
   - component: {fileID: 707130691}
   - component: {fileID: 707130695}
   - component: {fileID: 707130694}
-  - component: {fileID: 707130692}
   - component: {fileID: 707130693}
   m_Layer: 5
   m_Name: QuitButton
@@ -911,20 +957,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &707130692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707130690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9bf7140b4d977641b7ca8d23b906b67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPaused: 0
-  pauseMenuUI: {fileID: 0}
 --- !u!114 &707130693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,8 +1000,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 707130692}
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 470527492}
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1524,7 +1556,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 916547}
+      - m_Target: {fileID: 470527492}
         m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
@@ -1598,7 +1630,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559305939}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1775,12 +1807,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644808838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 150, y: 0, z: 50}
+  m_LocalPosition: {x: 161.81172, y: 146.74062, z: -817.07324}
   m_LocalScale: {x: 90, y: 90, z: 1}
   m_Children:
   - {fileID: 1647475656}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 470527489}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1644808841
 MonoBehaviour:
@@ -2206,7 +2238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b528e31f0ad10c04988cc7c13aea2af9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
