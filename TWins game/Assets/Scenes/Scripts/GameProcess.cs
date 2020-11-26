@@ -28,15 +28,25 @@ public class GameProcess : MonoBehaviour
         {
             if (isDialogActive)
             {
-                dialogWindowUI.SetActive(false);
                 isDialogActive = false;
 
             }
             else
             { 
-                dialogWindowUI.SetActive(true);
+                showDialog();
                 isDialogActive = true;
             }
         }
+    }
+
+
+    private void showDialog()
+    {
+        dialogWindowUI.SetActive(true);
+    }
+
+    private void hideDialog()
+    {
+        dialogWindowUI.SetActive(false);
     }
 }
