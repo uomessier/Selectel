@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class OptionItem
 {
     public string Text;
@@ -11,13 +12,13 @@ public class OptionItem
     public int FaithChange;
     public int SatietyChange;
 
-    public int NextDialog;
+    public int NextDialogue;
 
     public OptionItem(string text, string answer, int energyChange, int faithChange, int satietyChange, int nextDialog)
     {
         Text = text;
         Answer = answer;
         EnergyChange = energyChange; FaithChange = faithChange; SatietyChange = satietyChange;
-        NextDialog = nextDialog;
+        NextDialogue = nextDialog;
     }
 }

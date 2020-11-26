@@ -6,12 +6,12 @@ using UnityEngine;
 public class Dialogs
 {    
 
-    public List<DialogItem> dialogs;
+    //public List<DialogItem> dialogs;
 
     // Start is called before the first frame update
     void Start()
     {
-        dialogs = new List<DialogItem>();
+        /*dialogs = new List<DialogItem>();
         dialogs.Add(new DialogItem(1,
                                    20, 30,
                                    30, 40,
@@ -34,7 +34,7 @@ public class Dialogs
                                                     "О нет, корабль тонет в голубином помете!",
                                                     -10, 0, 30,
                                                     -1)
-                              );
+                              );*/
     }
 
 }
