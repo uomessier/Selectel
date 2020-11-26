@@ -8,6 +8,8 @@ public class GameProcess : MonoBehaviour
     public GameObject dialogWindowUI;
     private bool isDialogActive = false;
 
+    public Dialogs dialogs = new Dialogs();
+
     public Bar Energy;
     public Bar Faith;
     public Bar Satiety;
@@ -20,7 +22,6 @@ public class GameProcess : MonoBehaviour
         Satiety.setValue(50);
         dialogWindowUI.SetActive(false);
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -43,6 +44,7 @@ public class GameProcess : MonoBehaviour
     private void showDialog()
     {
         dialogWindowUI.SetActive(true);
+
     }
 
     private void hideDialog()
