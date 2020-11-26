@@ -6,28 +6,24 @@ using System.Xml;
 public class DialogueGenerator : MonoBehaviour
 {
 
-	public string fileName = "Example"; // имя генерируемого файла (без разрешения)
-	public string folder = "Dialogues"; // подпапка в Resources, для записи
+	public string fileName = "Dialogs"; // имя генерируемого файла (без разрешения)
 	public DialogueItem[] node;
 
 	public void Generate()
 	{
-		string path = Application.dataPath + "/Resources/" + folder + "/" + fileName + ".xml";
-
-		XmlElement DialogueElement;
-		XmlElement OptionElement;
-		XmlAttribute attribute;
+		string path = Application.dataPath + "/Dialogues/" + fileName + ".xml";
 
 		XmlDocument xmlDoc = new XmlDocument();
+
 		for (int j = 0; j < node.Length; j++)
 		{
-			DialogueElement = xmlDoc.CreateElement("node");
+			XmlElement DialogueElement = xmlDoc.CreateElement("node");
 
 			createDialogueItem(DialogueElement, node[j]);
 
 			for (int i = 0; i < node[j].Options.Length; i++)
 			{
-				OptionElement = xmlDoc.CreateElement("Options");
+				XmlElement OptionElement = xmlDoc.CreateElement("Options");
 
 				createOptionItem(OptionElement, node[j].Options[i]);
 

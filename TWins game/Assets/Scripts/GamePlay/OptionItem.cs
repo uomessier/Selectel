@@ -12,9 +12,9 @@ public class OptionItem
     public int FaithChange;
     public int SatietyChange;
 
-    public int NextDialogue;
+    public string NextDialogue;
 
-    public OptionItem(string text, string answer, int energyChange, int faithChange, int satietyChange, int nextDialog)
+    public OptionItem(string text, string answer, int energyChange, int faithChange, int satietyChange, string nextDialog)
     {
         Text = text;
         Answer = answer;
