@@ -13,11 +13,11 @@ public class SpaceshipFlight : MonoBehaviour
     void Start()
     {
         positions = new List<Vector2>();
-        positions.Add(new Vector2(0, 0));
-        positions.Add(new Vector2(0, 10));
-        positions.Add(new Vector2(-10, 0));
-        positions.Add(new Vector2(20, 0));
-        positions.Add(new Vector2(5, 5));
+        positions.Add(new Vector2(150, 0));
+        positions.Add(new Vector2(160, -10));
+        positions.Add(new Vector2(140, 0));
+        positions.Add(new Vector2(140, 10));
+        positions.Add(new Vector2(145, 5));
 
         transform.position = positions[0];
     }
