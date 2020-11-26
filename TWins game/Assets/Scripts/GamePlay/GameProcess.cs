@@ -29,8 +29,8 @@ public class GameProcess : MonoBehaviour
         {
             if (isDialogActive)
             {
+                hideDialog();
                 isDialogActive = false;
-
             }
             else
             { 
