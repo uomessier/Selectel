@@ -38,9 +38,5 @@ public class GameProcess : MonoBehaviour
                 isDialogActive = true;
             }
         }
-
-        Energy.changeValue(-1);
-        Faith.changeValue(-1);
-        Satiety.changeValue(-1);
     }
 }
